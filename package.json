@@ -6,7 +6,10 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "format": "prettier --write -c .",
+    "lint": "eslint . --max-warnings=0",
+    "prepare": "husky"
   },
   "dependencies": {
     "expo": "~50.0.14",
@@ -23,6 +26,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-native": "^4.1.0",
+    "husky": "^9.0.11",
     "prettier": "^3.2.5"
   },
   "private": true

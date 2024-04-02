@@ -1,27 +1,27 @@
 module.exports = {
   extends: [
-    "universe",
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
-    "prettier",
+    'universe',
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'prettier',
   ],
   overrides: [
     {
-      files: ["*.jsx"],
+      files: ['*.jsx'],
     },
   ],
-  plugins: ["prettier", "react", "react-native", "react-hooks"],
+  plugins: ['prettier', 'react', 'react-native', 'react-hooks'],
   rules: {
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-    "react/react-in-jsx-scope": "off",
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/react-in-jsx-scope': 'off',
   },
   settings: {
-    "import/ignore": ["react-native"],
+    'import/ignore': ['react-native'],
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
 };
