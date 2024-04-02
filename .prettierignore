@@ -1,0 +1,6 @@
+# Ignore artifacts:
+.expo
+build
+coverage
+node_modules
+README.md
