@@ -1,10 +1,12 @@
+import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <Text>Expo router!</Text>
+      <Button title="Staff" onPress={() => router.push('/staff')} />
       <StatusBar style="auto" />
     </View>
   );
