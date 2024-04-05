@@ -1,5 +1,5 @@
-import UserMainHeader from '~/components/UI/Home/MainHeader/MainHeader';
+import HomePage from '~/components/screens/Home/HomePage';
 
 export default function Page() {
-  return <UserMainHeader />;
+  return <HomePage />;
 }

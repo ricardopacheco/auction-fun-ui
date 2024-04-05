@@ -5,6 +5,8 @@ import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
+import HomeLayout from '~/components/layouts/HomeLayout';
+
 export default function Page() {
   return (
     <SafeAreaProvider>
@@ -13,7 +15,9 @@ export default function Page() {
           <ApplicationProvider {...eva} theme={eva.light}>
             <StatusBar translucent animated barStyle="dark-content" backgroundColor="transparent" />
 
-            <Slot />
+            <HomeLayout>
+              <Slot />
+            </HomeLayout>
           </ApplicationProvider>
         </ScrollView>
       </SafeAreaView>
