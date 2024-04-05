@@ -14,7 +14,7 @@ export default function Layout() {
 
   // Only require authentication within the (app) group's layout as users
   // need to be able to access the (auth) group and sign in again.
-  if (staff.token) {
+  if (!staff.token) {
     if (pathname.includes('/staff/login')) {
       return <StaffLayout />;
     }
