@@ -1,20 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import UserMainHeader from '~/components/UI/User/MainHeader/MainHeader';
 
 export default function Page() {
-  return (
-    <View style={styles.container}>
-      <Text>User Dashboard</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <UserMainHeader />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

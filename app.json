@@ -27,6 +27,7 @@
       "bundler": "metro",
       "build": { "babel": { "include": ["@ui-kitten/components"] } }
     },
-    "plugins": ["expo-localization", "expo-router"]
+    "plugins": ["expo-localization", "expo-router"],
+    "platforms": ["ios", "android", "web"]
   }
 }
