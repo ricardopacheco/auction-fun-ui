@@ -1,51 +1,40 @@
-import { Card, Text } from '@ui-kitten/components';
-import Countdown from 'react-countdown';
-import { StyleSheet } from 'react-native';
+import { Button, Card, Divider, Text } from '@ui-kitten/components';
+import PropTypes from 'prop-types';
+import { Image, StyleSheet } from 'react-native';
 
-function AuctionCard() {
+// TODO:
+// -> Add countdown;
+// -> Add truncate for title and description;
+function MainCard({ title, description, image }) {
+  const cardStatusList = ['primary', 'success', 'info', 'warning', 'danger', 'basic'];
+
   return (
-    // <View className={styles.container}>
-    //   <Text>Auction Card!</Text>
-    // </View>
     <>
-      <Card style={styles.card} status="primary">
-        <Text>Primary</Text>
-        <Countdown date={Date.now() + 10000} />
-      </Card>
-      <Card style={styles.card} status="success">
-        <Text>Success</Text>
-        <Countdown date={Date.now() + 100000} />
-      </Card>
-      <Card style={styles.card} status="info">
-        <Text>Info</Text>
-        <Countdown date={Date.now() + 200000} />
-      </Card>
-      <Card style={styles.card} status="warning">
-        <Text>Warning</Text>
-        <Countdown date={Date.now() + 300000} />
-      </Card>
-      <Card style={styles.card} status="danger">
-        <Text>Danger</Text>
-        <Countdown date={Date.now() + 400000} />
-      </Card>
-      <Card style={styles.card} status="basic">
-        <Text>Basic</Text>
-        <Countdown date={Date.now() + 500000} />
+      <Card style={styles.card} status={cardStatusList[1]}>
+        <Image source={{ uri: image }} style={{ width: '100%', height: 100 }} />
+        <Text category="h4">{title}</Text>
+        <Text>{description}</Text>
+
+        <Divider style={{ width: '100%', marginVertical: 5 }} />
+
+        <Button size="small" status="primary">
+          Bid!
+        </Button>
       </Card>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    borderColor: '#000',
-    width: 300,
-    height: 300,
-  },
   card: {
-    margin: 2,
+    marginBottom: 5,
   },
 });
 
-export default AuctionCard;
+MainCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
+export default MainCard;
